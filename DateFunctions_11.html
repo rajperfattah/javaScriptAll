@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="res"></h1>
+    <button onclick="showDate()">Date</button>
+    <button onclick="showYear()">Year</button>
+    <button onclick="showMonth()">Month</button>
+
+</body>
+
+<script>
+    var currentDate = new Date();
+    function showDate(){
+        document.getElementById("res").innerText = currentDate;
+    }
+
+    function showYear(){
+        document.getElementById("res").innerText = currentDate.getFullYear();
+    }
+
+    function showMonth(){
+        document.getElementById("res").innerText = currentDate.getMonth();
+    }
+</script>
+</html>

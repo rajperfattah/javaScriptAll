@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="pop"></h1>
+    <button onclick="pop()">Pop Element</button>
+
+    <button onclick="push()">push Element</button>
+    <button onclick="slice()">Slice</button>
+    <button onclick="reverse()">Reverse</button>
+    <button onclick="shift()">Shift</button>
+
+
+</body>
+<script>
+    // pop mehotd
+    var array4 = [1, 2, 3, 4, 5];
+
+    document.getElementById("pop").innerText = array4;
+
+    function pop() {
+        array4.pop();
+        document.getElementById("pop").innerText = array4;
+        // document.write("<h1>"+array4+"</h1>");
+    }
+
+
+    // push() Method
+    function push(){
+        var x=prompt("Enter number topush","");
+        array4.push(x);
+        document.getElementById("pop").innerText = array4;
+
+    }
+
+    // Slice Method
+    function slice(){
+        var slicedArray = array4.slice(2,4);
+        document.getElementById("pop").innerText = slicedArray;
+    }
+
+// Reverse Method()
+function reverse(){
+    array4.reverse();
+    document.getElementById("pop").innerText = array4;
+}
+
+
+   // Shift Method
+   function shift(){
+        var x = array4.shift();
+        document.getElementById("pop").innerText = x;
+    }
+</script>
+
+</html>

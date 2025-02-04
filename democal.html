@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calclator</title>
+    <style>
+        .main{
+            text-align: center;
+            background-color: aqua;
+            width: 300px;
+            height: 200px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <input type="number" name="first" id="first">
+    <select name="operator" id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="number" name="second" id="second">
+    <br>
+    <button onclick="calclator()">Result</button>
+    <input type="text" id="result" readonly />
+</div>
+</body>
+<script>
+function calclator(){
+    var res;
+    var num1=document.getElementById("first").value;
+    var operator=document.getElementById("operator").value;
+    var num2=document.getElementById("second").value;
+
+    if(operator== "+"){
+        res=parseInt(num1) + parseInt (num2);
+    }
+
+    if(operator== "-"){
+        res=parseInt(num1) - parseInt (num2);
+    }
+
+    
+    if(operator== "/"){
+        res=parseInt(num1) / parseInt (num2);
+    }
+
+    if(operator== "*"){
+        res=parseInt(num1) * parseInt (num2);
+    }
+
+    if(operator== "%"){
+        res=parseInt(num1) % parseInt (num2);
+    }
+
+    document.getElementById("result").value=res;
+}
+
+</script>
+</html>
