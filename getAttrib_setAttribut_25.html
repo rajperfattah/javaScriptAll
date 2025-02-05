@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.red{
+    color: red;
+}
+
+.blue{
+    color: blue;
+}
+    </style>
+</head>
+<body>
+    <div id="test"class="red">
+        hello everyone
+    </div>
+    <button onclick="testing()">click</button>
+    <h1 id="res"></h1>
+</body>
+<script>
+    var test=document.getElementById("test");
+    function testing(){
+        var cls=test.getAttribute("class");
+
+
+        if(cls=="red"){
+            test.setAttribute("class","blue");
+        }
+
+        document.getElementById("res").innerText=cls;
+
+    }
+</script>
+</html>

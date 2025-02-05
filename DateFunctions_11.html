@@ -24,7 +24,8 @@
     }
 
     function showMonth(){
-        document.getElementById("res").innerText = currentDate.getMonth();
+        var month=["January","February","March","Aprail","May","June","July","August","September","Octomber","November","Descember"];
+        document.getElementById("res").innerText = month[currentDate.getMonth()];
     }
 </script>
 </html>

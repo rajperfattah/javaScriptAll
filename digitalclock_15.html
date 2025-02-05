@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocDigiyal clock document</title>
+    <style>
+    h1{
+        font-size: 100px;
+        color: gold;
+        text-align: center;
+        font-family: Verdana;
+        background-color: cadetblue;
+    }
+    </style>
+</head>
+<body onload="showtime()">
+    <h1></h1>
+</body>
+
+<script>
+    function showtime(){
+        var d=new Date();
+        var h=d.getHours();
+        var m=d.getMinutes();
+        var s=d.getSeconds();
+        var ampm=d.getHours()>=12?"PM":"AM";
+
+        var time= h+" : "+m+":"+s +" "+ampm;
+        document.getElementsByTagName("h1")[0].innerText=time;
+        
+        setTimeout(showtime,1000);
+
+    }
+</script>
+</html>

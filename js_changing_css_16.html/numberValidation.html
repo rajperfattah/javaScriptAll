@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    please enter you number<br/>
+    <input type="text" name="" onkeyup="val(this)">
+    <div id="res"></div>
+</body>
+
+<script>
+    function val(elem){
+        document.getElementById("res").style.color="red";
+
+        if(isNaN(elem.value)){
+            document.getElementById("res").innerText="Please enter  numbers only";
+        }
+        else{
+            document.getElementById("res").innerText="";
+            if(elem.value.length>11){
+                document.getElementById("res").innerText="Please Enter only  11 digits";
+            }
+            else{
+                document.getElementById("res").innerText="";
+            }
+
+        }
+    }
+</script>
+</html>
